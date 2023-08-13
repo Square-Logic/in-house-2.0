@@ -1,0 +1,66 @@
+<div class="quote-wrap">
+  <blockquote>
+    <p class="p-large">
+      {{ section.settings.content | newline_to_br }}
+    </p>
+    <cite class="h3">
+      {{ section.settings.source | newline_to_br }}
+    </cite>
+  </blockquote>
+  
+  {% if section.settings.show_button and section.settings.button_url != blank %}
+    <a href="{{ section.settings.button_url }}" class="button">
+      {% if section.settings.button_text != blank %}
+        {{ section.settings.button_text }}
+      {% else %}
+        {{ 'general.shop.read_more' | t }}
+      {% endif %}
+    </a>            
+  {% endif %}
+</div>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Quote",
+    "settings": [
+      {
+        "id": "content",
+        "type": "textarea",
+        "label": "Content"
+      },
+      {
+        "id": "source",
+        "type": "textarea",
+        "label": "Source"
+      },
+      {
+        "id": "show_button",
+        "type": "checkbox",
+        "label": "Show Button?",
+        "default": true
+      },
+      {
+        "id": "button_url",
+        "type": "url",
+        "label": "Button URL"
+      },
+      {
+        "id": "button_text",
+        "type": "text",
+        "label": "Button Text",
+        "placeholder": "Read More",
+        "info": "Defaults to \"Read More\""
+      }
+    ],
+    "presets": [
+      {
+        "category": "Blockquote",
+        "name": "New Quote"
+      }
+    ]
+  }
+{% endschema %}

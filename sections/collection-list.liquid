@@ -1,0 +1,67 @@
+<div class="collection-list-wrap">
+  <div class="wrapper">
+    {% assign collection = collections[section.settings.collection] %}
+    {% render 'collection-list', collection: collection, title: section.settings.title, content: section.settings.content, show_button: section.settings.show_button, button_text: section.settings.button_text, max_products: section.settings.max_products %}
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Collection List",
+  "settings": [
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": "Collection"
+    },
+    {
+      "id": "max_products",
+      "type": "range",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "unit": "ct",
+      "label": "Products to Show",
+      "default": 2
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Title",
+      "info": "Defaults to Collection Title"
+    },
+    {
+      "id": "content",
+      "type": "textarea",
+      "label": "Content"
+    },
+    {
+      "id": "show_button",
+      "type": "checkbox",
+      "label": "Show Button?",
+      "default": true
+    },
+    {
+      "id": "button_text",
+      "type": "text",
+      "label": "Button Text",
+      "placeholder": "Shop Now",
+      "info": "Defaults to \"Shop Now\""
+    }
+  ],
+  "presets": [
+    {
+      "category": "Collection",
+      "name": "Collection List",
+      "settings": {
+        "collection": "collection-0",
+        "title": "Collection Title",
+        "content": "Lorem ipsum",
+        "show_button": true
+      }        
+    }
+  ]
+}
+{% endschema %}

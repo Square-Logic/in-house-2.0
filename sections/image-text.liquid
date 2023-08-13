@@ -1,0 +1,118 @@
+<div class="image_text-wrap">
+  <div class="image-text direction-{{ section.settings.direction }} bgcolor-{{ section.settings.bgcolor }} {% if section.settings.bgcolor == 'black' %}text-white{% endif %}">
+  
+    {% if section.settings.image != blank %}
+      <div class="image">
+        <img src="{{ section.settings.image | img_url: '1280x' }}" loading="lazy" alt="{{ section.settings.image.alt }}">
+      </div>
+    {% endif %}
+  
+    <div class="image-content">
+      <div class="image-content-inner valign-center">
+        <h3>{{ section.settings.title }}</h3>
+        {% if section.settings.content != blank %}
+          <p>{{ section.settings.content }}</p>
+        {% endif %}
+  
+        {% if section.settings.show_button and section.settings.button_url != blank %}
+        <a href="{{ section.settings.button_url }}" class="button">
+          {% if section.settings.button_text != blank %}
+            {{ section.settings.button_text }}
+          {% else %}
+            {{ 'general.shop.shop_now' | t }}
+          {% endif %}
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Image & Text",
+    "settings": [
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title",
+        "info": "Defaults to Collection Title"
+      },
+      {
+        "id": "content",
+        "type": "textarea",
+        "label": "Content"
+      },
+      {
+        "id": "show_button",
+        "type": "checkbox",
+        "label": "Show Button?",
+        "default": true
+      },
+      {
+        "id": "button_url",
+        "type": "url",
+        "label": "Button URL"
+      },
+      {
+        "id": "button_text",
+        "type": "text",
+        "label": "Button Text",
+        "placeholder": "Shop Now",
+        "info": "Defaults to \"Shop Now\""
+      },
+      {
+        "id": "direction",
+        "type": "select",
+        "label": "Direction",
+        "options": [
+          {
+            "value": "rtl",
+            "label": "Image -> Text"
+          },
+          {
+            "value": "ltr",
+            "label": "Text -> Image"
+          }
+        ]
+      },
+      {
+        "id": "bgcolor",
+        "type": "select",
+        "label": "Background Color",
+        "options": [
+          {
+            "value": "white",
+            "label": "White"
+          },
+          {
+            "value": "black",
+            "label": "Black"
+          }
+        ],
+        "default": "white"
+      }
+    ],
+    "presets": [
+      {   
+        "category": "Image with Text",
+        "name": "Image & Text",
+        "settings": {
+          "title": "Image with Text",
+          "content": "Lorem ipsum dolor sit amet",
+          "show_button": true,
+          "button_url": "#"
+        }
+      }
+    ]
+  }
+{% endschema %}

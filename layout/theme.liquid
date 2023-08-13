@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>{{ page_title }}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="{{ page_description | escape }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  {{ content_for_header }}
+  <!-- Header hook for plugins -->
+  {{ 'application.css' | asset_url | stylesheet_tag }}
+
+</head>
+
+<body class="template-{{ template }}">
+
+  {% section 'header' %}
+
+  {% if template != 'cart' %}
+    {% render 'mini-cart' %}
+  {% endif %}
+
+  <main role="main">
+    {{ content_for_layout }}
+
+    {% section 'footer' %}
+  </main>
+
+  <div id="no-click"></div>
+
+  <script src="{{ 'jquery-3.6.0.min.js' | asset_url }}"></script>
+  {% if settings.show_multiple_currencies %}
+    <script src="{{ 'currencies.js' | asset_url }}" ></script>
+    <script src="{{ 'jquery.currencies.min.js' | asset_url }}"></script>
+  {% endif %}
+
+  {% render 'currencies' %}
+  <script src="{{ 'slick.min.js' | asset_url }}" ></script>
+  <script src="{{ 'application.js' | asset_url }}"></script>
+</body>
+
+</html>
