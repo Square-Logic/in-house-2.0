@@ -1,6 +1,95 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      },
+      "16256853700c4c1750": {
+        "type": "slideshow",
+        "blocks": {
+          "16256853700c4c1750-0": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero-stitch.jpg",
+              "title": "Slide one",
+              "content": "Slide one content",
+              "button_url": "shopify:\/\/collections\/collection-0",
+              "button_text": "Slide Button"
+            }
+          },
+          "16256853700c4c1750-1": {
+            "type": "slide",
+            "settings": {
+              "title": "Slide two",
+              "content": "Lorem Ipsum Dolor Sit Amet",
+              "button_url": "#",
+              "button_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "16256853700c4c1750-0",
+          "16256853700c4c1750-1"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": 6500
+        }
+      },
+      "162593261763033c81": {
+        "type": "collection-list",
+        "settings": {
+          "collection": "collection-0",
+          "max_products": 2,
+          "title": "Collection Title",
+          "content": "Lorem ipsum",
+          "show_button": true,
+          "button_text": ""
+        }
+      },
+      "1625932649f8b061aa": {
+        "type": "image-text",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/show-2.jpg",
+          "title": "Image with Text",
+          "content": "Lorem ipsum dolor sit amet",
+          "show_button": true,
+          "button_url": "#",
+          "button_text": "",
+          "direction": "rtl",
+          "bgcolor": "black"
+        }
+      },
+      "1625932656de2fb0f3": {
+        "type": "image-text",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/show-1.jpg",
+          "title": "Image with Text",
+          "content": "Lorem ipsum dolor sit amet",
+          "show_button": true,
+          "button_url": "#",
+          "button_text": "",
+          "direction": "ltr",
+          "bgcolor": "black"
+        }
+      }
+    },
+    "content_for_index": [
+      "16256853700c4c1750",
+      "162593261763033c81",
+      "1625932649f8b061aa",
+      "1625932656de2fb0f3"
+    ]
+  },
   "presets": {
-    "Default": { }
+    "Default": {
+    }
   }
 }
