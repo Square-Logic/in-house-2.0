@@ -10,14 +10,12 @@
       {% render 'nav-list', handle: 'main-menu', class: 'main-menu-list' %}
       {% render 'nav-list', handle: 'footer', class: 'secondary-menu-list' %}
     </div>
-  
+
     <div class="footer-right">
       {% assign copyright_date = 'now' | date: '%Y' %}
       <span class="copyright-info">
         {{ 'footer.bottom.copyright' | t: date: copyright_date }}
       </span>
-    
-      {% render 'currency-picker' %}
     </div>
   </div>
 </div>
