@@ -4,7 +4,7 @@
       {% assign shop_title = 'general.shop.title' | t %}
       {% render 'logo-icon', alt: shop_title, class: 'logo-main' %}
     </a>
-  
+
     {% render 'nav-list', handle: 'main-menu', class: 'header-nav-list' %}
   </div>
 
@@ -13,9 +13,7 @@
       Search
       {% render 'icon-search' %}
     </a>
-  
-    {% render 'currency-picker' %}
-  
+
     <a class="text-link cart-link js-cart-link" href="/cart">
       {{ 'cart.button.count_html' | t: itemCount: cart.item_count }}
     </a>
