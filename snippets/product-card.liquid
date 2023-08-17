@@ -2,7 +2,11 @@
   <a class="link-to-product" href="{{ product.url | within: collection }}">
     {% if product.featured_image %}
       <div class="card-image">
-        <img src="{{ product.featured_image.src | img_url: '750x1000', crop: 'center' }}" loading="lazy" alt="{{ product.featured_image.alt | escape }}">
+        <img
+          src="{{ product.featured_image.src | image_url: width: 750, height: 1000, crop: 'center' }}"
+          alt="{{ product.featured_image.alt | escape }}"
+          width="{{ image.width }}"
+          height="{{ image.height }}">
       </div>
     {% endif %}
 
@@ -21,7 +25,7 @@
             {% if product.options.size == 1 %}
               {{ 'product.card.options_styles_singular' | t: optionCount: product.options.size, styleCount: product.variants.size }}
             {% else %}
-              {{ 'product.card.options_styles_plural' | t: optionCount: product.options.size, styleCount: product.variants.size }}              
+              {{ 'product.card.options_styles_plural' | t: optionCount: product.options.size, styleCount: product.variants.size }}
             {% endif %}
           {% else %}
             {{ product.variants.first.title }}
