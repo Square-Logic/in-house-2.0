@@ -4,8 +4,8 @@
     {% if section.settings.image != blank %}
       <div class="image">
         <img
-          src="{{ section.settings.image | img_url: '1280x' }}"
-          loading="lazy"
+          src="{{ section.settings.image | image_url: width: 1280 }}"
+          width="{{ image.width }}"
           alt="{{ section.settings.image.alt }}">
       </div>
     {% endif %}
