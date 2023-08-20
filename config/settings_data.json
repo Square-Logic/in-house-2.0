@@ -11,20 +11,40 @@
         "settings": {
         }
       },
-      "162593261763033c81": {
-        "type": "collection-list",
+      "eb8c2c58-e72b-44c0-9944-0279b67bcf04": {
+        "type": "slideshow",
+        "blocks": {
+          "eb8c2c58-e72b-44c0-9944-0279b67bcf04-slide-1": {
+            "type": "slide",
+            "settings": {
+              "title": "Slide one",
+              "content": "Slide one content",
+              "button_url": "#",
+              "button_text": "Slide Button"
+            }
+          },
+          "eb8c2c58-e72b-44c0-9944-0279b67bcf04-slide-2": {
+            "type": "slide",
+            "settings": {
+              "title": "Slide two",
+              "content": "Lorem Ipsum Dolor Sit Amet",
+              "button_url": "#",
+              "button_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "eb8c2c58-e72b-44c0-9944-0279b67bcf04-slide-1",
+          "eb8c2c58-e72b-44c0-9944-0279b67bcf04-slide-2"
+        ],
         "settings": {
-          "collection": "collection-0",
-          "max_products": 2,
-          "title": "Collection Title",
-          "content": "Lorem ipsum",
-          "show_button": true,
-          "button_text": ""
+          "autoplay": true,
+          "autoplay_speed": 6500
         }
       }
     },
     "content_for_index": [
-      "162593261763033c81"
+      "eb8c2c58-e72b-44c0-9944-0279b67bcf04"
     ]
   },
   "presets": {
