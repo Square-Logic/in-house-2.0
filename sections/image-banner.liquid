@@ -12,3 +12,30 @@
     </div>
   {%- endif -%}
 </div>
+
+{% schema %}
+  {
+    "name": "t:sections.image-banner.name",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:section.image-banner.settings.image.label"
+      }, {
+        "type": "range",
+        "id": "image_overlay_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
+        "default": 0
+      }
+    ]
+  }
+{% endschema %}
