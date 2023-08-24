@@ -1,3 +1,11 @@
+{%- style -%}
+  #Banner-{{ section.id }}::after {
+    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }}
+    ;
+  }
+{% endstyle %}
+
+
 <div id="Banner--{{ section.id }}" class="banner banner--{{ section.settings.image_height }}">
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank %} placeholder{% endif %}">
