@@ -1,3 +1,7 @@
+:root {
+  --color-foreground: 18, 18, 18;
+}
+
 .banner {
   display: flex;
   position: relative;
