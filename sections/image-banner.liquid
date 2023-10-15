@@ -8,7 +8,7 @@
 {% endstyle %}
 
 
-<div id="Banner--{{ section.id }}" class="banner banner--{{ section.settings.image_height }}">
+<div id="Banner-{{ section.id }}" class="banner banner--{{ section.settings.image_height }}">
 
   {%- if section.settings.image != blank -%}
     <div class="banner__media">
@@ -53,4 +53,5 @@
       }
     ]
   }
+  
 {% endschema %}
