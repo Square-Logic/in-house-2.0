@@ -53,4 +53,8 @@
   .banner {
     flex-direction: row;
   }
+
+  .banner--medium:not(.banner--adapt) {
+    min-height: 56rem;
+  }
 }
