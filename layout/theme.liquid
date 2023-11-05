@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
   <head>
     <title>{{ page_title }}</title>
     <meta charset="utf-8">
@@ -10,12 +9,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     {{ content_for_header }}
     <!-- Header hook for plugins -->
-    {% comment %} {{ 'application.css' | asset_url | stylesheet_tag }} {% endcomment %}
-
+    {{ 'application.css' | asset_url | stylesheet_tag }}
   </head>
 
   <body class="template-{{ template }}">
-
     {% section 'header' %}
 
     {% if template != 'cart' %}
@@ -34,5 +31,4 @@
 
     <script src="{{ 'application.js' | asset_url }}"></script>
   </body>
-
 </html>
