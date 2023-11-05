@@ -298,12 +298,6 @@ a:hover {
   color: #000000;
 }
 
-.link-logo {
-  font-size: 55px;
-  display: inline-block;
-  width: 55px;
-}
-
 .text-link {
   font-family: "Plex Mono", "Courier New", Courier, monospace;
   color: #555555;
@@ -1082,33 +1076,6 @@ input[type="radio"]:checked + label .option-color .option-color-inner:after {
 }
 .hero-slideshow .slide .slide-content .button {
   margin-top: 20px;
-}
-
-#header-global {
-  width: 100%;
-  height: 100px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 20px 40px;
-  background: #ffffff;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-#header-global .link-logo {
-  color: #000000;
 }
 
 .header-nav-list {
