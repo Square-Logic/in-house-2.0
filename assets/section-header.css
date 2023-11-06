@@ -39,3 +39,44 @@
 #header-global .link-logo {
   color: #000000;
 }
+
+.cart-link .cart-item-count {
+  display: inline-block;
+  background-color: #555555;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 1px;
+}
+.cart-link:hover .cart-item-count {
+  background-color: #000000;
+}
+
+.header-nav-list {
+  margin-left: 40px;
+  display: inline-block;
+}
+.header-nav-list li {
+  display: inline-block;
+}
+.header-nav-list li:not(:first-of-type) {
+  margin-left: 20px;
+}
+.header-nav-list .text-link {
+  color: #333333;
+}
+.header-nav-list .text-link:hover {
+  color: #000000;
+}
+
+.header-right {
+  margin-top: 18px;
+}
+.header-right > * {
+  display: inline-block;
+}
+.header-right > *:not(:first-child) {
+  margin-left: 20px;
+}
