@@ -1,3 +1,5 @@
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
+
 <div id="header-global">
   <div class="header-left">
     <a class="link-logo" href="/">
@@ -18,5 +20,4 @@
       {{ 'cart.button.count_html' | t: itemCount: cart.item_count }}
     </a>
   </div>
-
 </div>
