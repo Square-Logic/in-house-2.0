@@ -298,15 +298,6 @@ a:hover {
   color: #000000;
 }
 
-.text-link {
-  font-family: "Plex Mono", "Courier New", Courier, monospace;
-  color: #555555;
-  fill: currentColor;
-}
-.text-link:hover {
-  color: #000000;
-}
-
 button[type="submit"],
 .button {
   appearance: none;
